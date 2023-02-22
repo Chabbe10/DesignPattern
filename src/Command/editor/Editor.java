@@ -58,7 +58,7 @@ public class Editor {
                 undo();
             }
         });
-        
+
         buttons.add(ctrlC);
         buttons.add(ctrlX);
         buttons.add(ctrlV);
@@ -78,8 +78,8 @@ public class Editor {
     private void undo(){
         if(history.isEmpty()){
             return;
-        } 
-            
+        }
+
         Command command = history.pop();
         if(command != null){
             command.undo();
